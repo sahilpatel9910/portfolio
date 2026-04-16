@@ -4,11 +4,13 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Download, FileText } from "lucide-react";
 
 const RESUME_URL =
-  "https://drive.google.com/file/d/1X2F9ni6M3oBgjM81GT3O4SDLOYgADaWi/view?usp=sharing";
+  "https://drive.google.com/file/d/1DY8CwPzzK2IAuSRkA1s40qqlTrZTa5S4/view?usp=sharing";
+
+const RESUME_FILE_ID = "1DY8CwPzzK2IAuSRkA1s40qqlTrZTa5S4";
 
 // Convert Google Drive view URL to embed URL
 const EMBED_URL =
-  "https://drive.google.com/file/d/1X2F9ni6M3oBgjM81GT3O4SDLOYgADaWi/preview";
+  `https://drive.google.com/file/d/${RESUME_FILE_ID}/preview`;
 
 export default function ResumePage() {
   return (
@@ -50,7 +52,7 @@ export default function ResumePage() {
               Open in Google Drive
             </a>
             <a
-              href={`https://drive.google.com/uc?export=download&id=1X2F9ni6M3oBgjM81GT3O4SDLOYgADaWi`}
+              href={`https://drive.google.com/uc?export=download&id=${RESUME_FILE_ID}`}
               className="inline-flex items-center gap-2 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 px-5 py-2.5 rounded-xl text-sm font-medium transition-all"
             >
               <Download size={15} />

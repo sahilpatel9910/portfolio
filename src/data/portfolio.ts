@@ -13,6 +13,23 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "StrataHub",
+    description:
+      "Production-grade multi-tenant strata management SaaS with dedicated Manager, Resident, and Super Admin portals, built around strict building-scoped access control and operational workflows.",
+    longDescription:
+      "Built with Next.js, TypeScript, tRPC v11, PostgreSQL, Prisma, and Supabase to deliver type-safe full-stack workflows for documents, messaging, parcels, levies, and notifications. The platform uses signed storage URLs, role-based isolation across portals, and CI/CD deployment on Vercel with Docker-backed local development.",
+    keyFeatures: [
+      "Three isolated portals: Manager, Resident, and Super Admin",
+      "Building-scoped role-based access control across five permission levels",
+      "Type-safe API layer with tRPC v11 and TanStack Query",
+      "Signed document upload and delivery via Supabase Storage",
+      "Docker-based local setup with CI/CD on GitHub Actions and Vercel",
+    ],
+    tags: ["Next.js", "TypeScript", "tRPC", "PostgreSQL", "Supabase", "Prisma ORM", "Docker", "Vercel"],
+    status: "in development",
+    live: "https://stratahub-six.vercel.app/login",
+  },
+  {
     title: "Vision Verse Interactive",
     description:
       "Led full-stack development of a multi-vendor SaaS retail platform supporting 200+ users — coordinating a team of 4–6 across 6 Agile sprints via JIRA while owning architecture, QA, and production rollout.",

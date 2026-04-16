@@ -73,7 +73,16 @@ const education = [
 ];
 
 const certifications = [
-  { title: "Python Professional Programmer Certificate", issuer: "PCEP" },
+  {
+    title: "Python Programming Certification",
+    issuer: "GUVI Geek Network",
+    href: "https://www.guvi.in/share-certificate/2S3BF1767D3209986s",
+  },
+  {
+    title: "AI Fluency: Framework and Foundations",
+    issuer: "Anthropic",
+    href: "https://verify.skilljar.com/c/xrmj2av5r85a",
+  },
 ];
 
 function SkillChip({ name, isDark }: { name: string; isDark?: boolean }) {
@@ -245,14 +254,17 @@ export default function AboutPage() {
           </h2>
           <div className="flex flex-wrap gap-3">
             {certifications.map((c, i) => (
-              <div
+              <a
                 key={i}
+                href={c.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-4 py-3 rounded-xl border border-sky-300/50 dark:border-sky-500/20 bg-sky-50 dark:bg-sky-500/5 flex items-center gap-2"
               >
                 <BadgeCheck size={14} className="text-sky-500" />
                 <span className="text-sm text-zinc-700 dark:text-zinc-300">{c.title}</span>
                 <span className="text-xs text-zinc-400 font-mono">· {c.issuer}</span>
-              </div>
+              </a>
             ))}
           </div>
         </motion.div>
